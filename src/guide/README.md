@@ -2,11 +2,10 @@
 
 > Una guia para instalación de nodos de IOTA
 
-Gracias por visitar este sitio [The IOTA Uncomplicated](https://www.iotauncomplicated.org)!
+Gracias por visitar este sitio [untangled wiki](untangled.wiki)!
 
 Este sitio pretende ser una guia para la instalación de nodos Iota de forma sencilla.
-
-Al tratarse de una guía basada en Ubuntu son necesarios mínimos conocimientos sobre gestión en Ubuntu.
+Este sitio esta en construcción e ira actualizandose en el tiempo.
 
 Se tratará la instalacón de los nodos:
 - __Hornet__
