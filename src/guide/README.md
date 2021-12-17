@@ -5,6 +5,7 @@
 Gracias por visitar este sitio [untangled wiki](untangled.wiki)!
 
 Este sitio pretende ser una guia para la instalación de nodos Iota de forma sencilla.
+
 Este sitio esta en construcción e ira actualizandose en el tiempo.
 
 Se tratará la instalacón de los nodos:
