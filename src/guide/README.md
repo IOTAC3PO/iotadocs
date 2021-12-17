@@ -21,4 +21,4 @@ Mas adelante en el _TODO_
 
 ---
 
-> segerencias@iotauncomplicated.org
+> segerencias@untangled.wiki
