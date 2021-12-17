@@ -81,7 +81,7 @@ module.exports = {
           title: 'Chronicle',
           collapsable: true,
           children: [
-            '/guide/chronicle/chorinicle'
+            '/guide/chronicle/chronicle'
           ]
         },
 
