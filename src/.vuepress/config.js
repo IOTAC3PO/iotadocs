@@ -29,14 +29,14 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
+    repo: 'https://github.com/IOTAC3PO/iotadocs.git',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
     lastUpdated: true,
     nav: [
       {
-        text: 'Guide',
+        text: 'Guía',
         link: '/guide/',
       },
 
