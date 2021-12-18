@@ -8,7 +8,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: 'Desenrredando Iota. Una guía simple y sencilla',
+  description: 'Desenredando Iota. Una guía simple y sencilla',
 
   /**description: description,*/
 
@@ -47,6 +47,7 @@ module.exports = {
           title: 'Hornet',
           collapsable: true,
           children: [
+            '/guide/hornet/hornet_requerimientos',
             '/guide/hornet/hornet_apt',
             '/guide/hornet/hornet_docker',
             '/guide/hornet/hornet_nativo'

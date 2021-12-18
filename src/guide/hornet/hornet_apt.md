@@ -1,10 +1,11 @@
-# Metodo 1. Repositorio apt de Hornet
+# Método 1. Repositorio apt de Hornet
 
 > Los desarrolladores de Hornet mantienen el repositorio apt de Hornet.
 
 ## Antes de comenzar
 
-Antes de iniciar la Instalación por el metodo APT tendremos que tener el sistema operativo actualizado.
+
+Antes de iniciar la Instalación por el método APT tendremos que revisar los [requerimientos de software/hardware](http://wwww.untangled.wiki/guide/hornet_requerimientos) y tener el sistema operativo actualizado.
 
 Para esto ejecutamos en la consola:
 
@@ -18,7 +19,7 @@ Ejecutando las cuatro sentencias indicadas en el cuadro sh se realizan las sigui
 
 - Importa la clave pública que se utiliza para firmar la liberación del software.
 - Añada el repositorio de Hornet APT a sus fuentes de APT.
-- Actualica las listas de paquetes apt e instala Hornet.
+- Actualiza las listas de paquetes apt e instala Hornet.
 - Habilita el servicio systemd, esto implica que al reiniciar el servidor el nodo se ejecutará automáticamente, sin nuestra intervención.
 
 ```sh
@@ -47,7 +48,7 @@ cat /var/lib/hornet/config.json
 ```
 
 En este momento hay que reemplazar el los valores anteriores por 0.0.0.0
-Adicionalmente hay que activar el plugin Autopeering para encontar vecinos.
+Adicionalmente hay que activar el plugin Autopeering para encontrar vecinos.
 
 ```sh
 
@@ -73,7 +74,7 @@ Una vez que el servidor está instalado es necesario hacerlo visible a la red pa
 
 - el puerto 8081 que no muestra el dashboard del nodo.
 - el puerto 15600 que habilita el protocolo goship.
-- el puerto 14626 que habilita la comunicacion con otros nodos de la red .
+- el puerto 14626 que habilita la comunicación con otros nodos de la red .
 
 ```sh
 sudo ufw allow 8081/tcp
