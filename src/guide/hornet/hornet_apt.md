@@ -5,7 +5,7 @@
 ## Antes de comenzar
 
 
-Antes de iniciar la Instalación por el método APT tendremos que revisar los [requerimientos de software/hardware](http://wwww.untangled.wiki/guide/hornet_requerimientos) y tener el sistema operativo actualizado.
+Antes de iniciar la Instalación por el método APT tendremos que revisar los requerimientos de software/hardware y tener el sistema operativo actualizado.
 
 Para esto ejecutamos en la consola:
 
