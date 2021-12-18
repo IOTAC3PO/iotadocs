@@ -69,6 +69,8 @@ sudo ufw reload
 ## Creación del servicio de sistema
 
 Esta operación es necesaria para realizar tareas del nodo.
+Añade un servicio hornet al inicio del sistema operativo, de esta forma inicia de forma automática el nodo.
+Es necesario usar __sudo su__ ya que el usuario de opreración(conexión a la consola) no es administrador, realizamos la operación __cat__ y finalmente __exit__ para volver al usuario de operaciones.
 
 ```sh
 sudo su
@@ -99,6 +101,8 @@ EOF
 
 exit
 ```
+
+Habilitamos el servicio __hornet-mainnet.service__,  arrancamos el nodo y por último vemos el log del nodo con journalctl.
 
 ```sh
 sudo systemctl enable hornet-mainnet.service
