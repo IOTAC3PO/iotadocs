@@ -26,7 +26,7 @@ En este momento hay que configurar el nodo para poder sincronizar la base de dat
 ### config.toml
 
 El fichero de configuración se encuentra en esta ubicación
-> /opt/bee/bee-node-0.2.1-linux-x86-64/config.json
+> /opt/bee/bee-node-0.2.1-linux-x86-64/config.toml
 
 Al realizar _cat_ vemos el contenido del fichero donde podemos ver que en el por defecto hat varias referencias a localhost o 127.0.0.1
 
