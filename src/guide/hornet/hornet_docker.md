@@ -5,7 +5,7 @@
 
 ## Instalación Docker
 
-En este metodo de instalación se usará un contenedor de Docker del nodo Hornet por lo que es necesario tener instalado Docker en el VPS o Raspberry.
+En este método de instalación se usará un contenedor de Docker del nodo Hornet por lo que es necesario tener instalado Docker en el VPS o Raspberry.
 
 En la consola linux ejecutamos:
 
@@ -20,7 +20,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-Cerrar la consola e iniciar una nueva sesión con el mismo usuario que se añadio al grupo docker.
+Cerrar la consola e iniciar una nueva sesión con el mismo usuario que se añadió al grupo docker.
 
 En este momento podemos comprobar el correcto funcionamiento llamando a un contenedor de prueba Docker.
 
@@ -127,7 +127,7 @@ sudo sed -i 's/"passwordSalt": "000000000000000000000000000000000000000000000000
 ## config.json
 
 En este momento hay que reemplazar el los valores anteriores por 0.0.0.0
-Adicionalmente hay que activar el plugin Autopeering para encontar vecinos.
+Adicionalmente hay que activar el plugin Autopeering para encontrar vecinos.
 
 ```sh
 
@@ -139,8 +139,8 @@ sudo sed -i 's/"Spammer"/"Spammer","Autopeering"/g' config.json
 
 ## Ejecutar el nodo
 
-Solo tendremos que llamar a docker-compose desde el mismi directorio donde se clono el repositorio Hornet.
-Esto nos deja corriendo el conenedor en segundo plano.
+Solo tendremos que llamar a docker-compose desde el mismo directorio donde se clono el repositorio Hornet.
+Esto nos deja corriendo el contenedor en segundo plano.
 
 ```sh
 docker-compose up -d
