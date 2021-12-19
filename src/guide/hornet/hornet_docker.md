@@ -59,7 +59,7 @@ sudo mkdir p2pstore && sudo chown 65532:65532 p2pstore
 
 ## Configuración de puertos
 
-En la version de docker al igual que en la versión apt es necesario modificar el fichero config.json para adecuar los puertos a nuestro ámbito de ejecución.
+En la versión de docker al igual que en la versión apt es necesario modificar el fichero config.json para adecuar los puertos a nuestro ámbito de ejecución.
 
 [Hornet config.json](http://localhost:8080/guide/hornet/hornet_apt.html#despues-de-instalar)
 

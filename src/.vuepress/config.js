@@ -58,6 +58,7 @@ module.exports = {
           title: 'Bee',
           collapsable: true,
           children: [
+            '/guide/bee/bee_requerimientos',
             '/guide/bee/bee'
           ]
         },
@@ -66,6 +67,7 @@ module.exports = {
           title: 'GoShimmer',
           collapsable: true,
           children: [
+            '/guide/goshimmer/goshimmer_requerimientos',
             '/guide/goshimmer/goshimmer'
           ]
         },

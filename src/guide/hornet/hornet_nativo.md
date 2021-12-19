@@ -44,7 +44,7 @@ sudo sed -i 's/"Spammer"/"Spammer","Autopeering"/g' /opt/hornet/HORNET-1.0.5_Lin
 
 ## Operaciones con el servidor
 
-En caso que no este instalado el cortafuego lo instalaremos con y habilitaremos el puerto 22 ssh:
+En caso que no este instalado el cortafuegos lo instalaremos con y habilitaremos el puerto 22 ssh:
 
 - el puerto 22 que nos da acceso a la gestión del servidor.
 
