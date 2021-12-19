@@ -1,5 +1,5 @@
 # Antes de empezar
-> Debemos tener en cuenta la necesidades mínimas para la instalación un nodo Hornet.
+> Debemos tener en cuenta la necesidades mínimas para la instalación un nodo Bee.
 > Esta guía no cubre el ámbito de seguridad del nodo ni del sistema operativo.
 
 ## Requerimientos hardware
@@ -7,7 +7,7 @@
 Los nodos Bee consumen pocos recursos y estos pueden funcionar en arquitecturas x86.
 
 La configuración mínima es:
-- x86 Pi 4 con 2Gb ram
+- x86 con 2Gb ram
 - Disco SSD o NVME
 
 
