@@ -53,7 +53,6 @@ module.exports = {
             '/guide/hornet/hornet_nativo'
           ]
         },
-
         {
           title: 'Bee',
           collapsable: true,
@@ -62,7 +61,6 @@ module.exports = {
             '/guide/bee/bee'
           ]
         },
-
         {
           title: 'GoShimmer',
           collapsable: true,
@@ -71,32 +69,6 @@ module.exports = {
             '/guide/goshimmer/goshimmer'
           ]
         },
-
-        {
-          title: 'Wasp',
-          collapsable: true,
-          children: [
-            '/guide/wasp/wasp'
-          ]
-        },
-
-        {
-          title: 'Chronicle',
-          collapsable: true,
-          children: [
-            '/guide/chronicle/chronicle'
-          ]
-        },
-
-
-        {
-          title: 'Esp32',
-          collapsable: true,
-          children: [
-            '/guide/esp32/esp32'
-          ]
-        },
-
         {
           title: 'Traefik',
           collapsable: true,
