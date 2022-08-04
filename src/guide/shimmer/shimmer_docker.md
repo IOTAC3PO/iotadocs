@@ -240,3 +240,5 @@ Aquí paramos el contenedor Shimmer
 ```sh
 docker-compose stop
 ```
+
+## Grafana
