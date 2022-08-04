@@ -1,16 +1,15 @@
 # Método 1. Shimmer con Docker
-> La instalación del nodo Shimmer se realiza con imagenes Docker:
+> La instalación del nodo Shimmer se realiza con imágenes Docker:
 > - Nodo Hornet
 > - Proxy Traefik
 > - Prometheus y Grafana
 > - Módulos INX
 
- La opción más recomentadable de instalacion del nodo Shimmer es con Docker ya que nos proporciona de una forma sencilla la instalación de todas las herramientas.
-
+La opción más recomendable de instalación del nodo Shimmer es con Docker ya que nos proporciona de una forma sencilla la instalación de todas las herramientas.
 
 ## Instalación Docker
 
-Antes de continuar tenemos que instalar Docker en nuestro VPS. Hay diferentes formas derealizarlo pero la mas sencilla es utilizar el script sh que proporciona Docker.
+Antes de continuar tenemos que instalar Docker en nuestro VPS. Hay diferentes formas de realizarlo pero la mas sencilla es utilizar el script sh que proporciona Docker.
 
 Entrando en la consola linux como admin:
 
@@ -61,7 +60,7 @@ El nodo Shimmer necesita de ficheros de recursos para poder ejecutarse, en este 
 
 mkdir -p /opt/shimmerbeta
 cd /opt/shimmerbeta
-wget -c  https://github.com/iotaledger/hornet/releases/download/v2.0.0-beta.3/HORNET-2.0.0-beta.3-docker.tar.gz
+wget -c https://github.com/iotaledger/hornet/releases/download/v2.0.0-beta.3/HORNET-2.0.0-beta.3-docker.tar.gz
 tar -xzf HORNET-2.0.0-beta.3-docker.tar.gz
 rm HORNET-2.0.0-beta.3-docker.tar.gz
 
@@ -69,7 +68,7 @@ rm HORNET-2.0.0-beta.3-docker.tar.gz
 
 ## Configuración de puertos
 
-En este momento abriremos los puertos necesarios en nuestro VPS para permitir la comunicacion del nodo con el exterior.
+En este momento abriremos los puertos necesarios en nuestro VPS para permitir la comunicación del nodo con el exterior.
 
 Para esto ejecutamos en la consola de linux:
 
@@ -111,10 +110,9 @@ docker compose logs -f
 
 ```
 
-- Viendo las trazas podemos comprobar la actividad del nodo, modulos INX y el monitor Grafana.
+- Viendo las trazas podemos comprobar la actividad del nodo, módulos INX y el monitor Grafana.
 
-
-Despues de comprobar el correcto funcionamiento y antes de crear usuario y password, creamos un fichero de entorno donde guardaremos los siguientes datos:
+Después de comprobar el correcto funcionamiento y antes de crear usuario y password, creamos un fichero de entorno donde guardaremos los siguientes datos:
 - Host
 - Email
 - Dashboard user
@@ -135,10 +133,9 @@ Nos devuelve 'static.103.124.46.78.clients.your-server.de'
 
 ```
 
-Descargamos las imagenes de los contenedores Docker del nodo.
+Descargamos las imágenes de los contenedores Docker del nodo.
 
 Para esto ejecutamos en la terminal:
-
 
 ```sh 
 
@@ -159,15 +156,15 @@ Donde 'YOURPASSWORDGOESHERE' corresponde a nuestra password
 
 y nos devuelve 
 {
-  "passwordHash": "050b72362975522a15a8b769c97a581ac454cf770cbf38a7736a632ebdce4f96",
-  "passwordSalt": "15181e146d24e35ecb35482f163f15d551a4c6cba9b8a87e62399e9df9390208"
+"passwordHash": "050b72362975522a15a8b769c97a581ac454cf770cbf38a7736a632ebdce4f96",
+"passwordSalt": "15181e146d24e35ecb35482f163f15d551a4c6cba9b8a87e62399e9df9390208"
 }
 ```
 
 ```sh
 
 echo esto sustituimos los valores del siguiente script:
-- YOURHOSTNAME por static.103.124.46.78.clients.your-server.de que nos devolvio el comando DIG
+- YOURHOSTNAME por static.103.124.46.78.clients.your-server.de que nos devolvió el comando DIG
 - YOUREMAIL por tu email.- miemail@gmail.com (u otro de vuestra conveniencia)
 - YOURDASHBOARDUSERNAME por admin (u otro de vuestra conveniencia)
 - YOURDASHBOARDPASSWORDHASH por el valor de passwordHash
@@ -204,7 +201,7 @@ DASHBOARD_SALT=15181e146d24e35ecb35482f163f15d551a4c6cba9b8a87e62399e9df9390208
 
 ```
 
-Una vez comprobado le diremos a la instalacion del Nodo que use esos valores.
+Una vez comprobado le diremos a la instalación del Nodo que use esos valores.
 
 Para esto ejecutamos en la terminal:
 
@@ -242,3 +239,14 @@ docker-compose stop
 ```
 
 ## Grafana
+
+El nodo de Shimmer viene con un monitor de recursos Grafana, para acceder a el dashboard para acceder a el escribimos en la barra del navegador web la dirección Dig
+que consultamos anteriormente:
+
+https://static.103.124.46.78.clients.your-server.de/dashboard
+
+Al ser la primera vez que accedemos nos solicita un usuario y password que por defecto es admin/admin .- al introducir el login nos solicita cambiar el password por defecto donde eligiéremos un password a nuestra conveniencia.
+
+Una vez dentro del panel de administración tendremos que añadir un panel para monitorear nuestro nodo Shimmer usando el siguiente Json de configuración:
+
+https://github.com/Dr-Electron/hornet/blob/feat/grafana-dashboard/docker-example/assets/grafana/dashboards/node_dashboard.json
