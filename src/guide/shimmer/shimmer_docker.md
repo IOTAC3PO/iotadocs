@@ -39,8 +39,6 @@ docker run hello-world
 
 ```
 
-[Docker postinstall](https://docs.docker.com/engine/install/linux-postinstall/)
-
 ## Instalación DockerCompose
 
 Para la ejecución del nodo Shimmer utilizaremos dockercompose ya que tiene la ventaja de centralizar la configuración en un único fichero yaml.
@@ -249,4 +247,4 @@ Al ser la primera vez que accedemos nos solicita un usuario y password que por d
 
 Una vez dentro del panel de administración tendremos que añadir un panel para monitorear nuestro nodo Shimmer usando el siguiente Json de configuración:
 
-https://github.com/Dr-Electron/hornet/blob/feat/grafana-dashboard/docker-example/assets/grafana/dashboards/node_dashboard.json
+[Grafana Json node dashing](https://github.com/Dr-Electron/hornet/blob/feat/grafana-dashboard/docker-example/assets/grafana/dashboards/node_dashboard.json)
