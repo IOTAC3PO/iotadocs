@@ -51,9 +51,17 @@ module.exports = {
             '/guide/hornet/hornet_apt',
             '/guide/hornet/hornet_docker',
             '/guide/hornet/hornet_nativo'
+
           ]
         },
-
+        {
+          title: 'Hornet Shimmer',
+          collapsable: true,
+          children: [
+            '/guide/shimmer/shimmer_requerimientos',
+            '/guide/shimmer/shimmer_docker'
+          ]
+        },
         {
           title: 'Bee',
           collapsable: true,

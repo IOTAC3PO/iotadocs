@@ -15,5 +15,9 @@
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "http-server": "^14.1.0",
+    "serve-dist": "^1.0.11"
   }
 }
