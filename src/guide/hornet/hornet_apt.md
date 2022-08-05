@@ -27,7 +27,7 @@ wget -qO - https://ppa.hornet.zone/pubkey.txt | sudo apt-key add -
 
 sudo sh -c 'echo "deb http://ppa.hornet.zone stable main" >> /etc/apt/sources.list.d/hornet.list'
 
-sudo apt update -y | sudo apt install hornet
+sudo apt update -y && sudo apt install hornet
 
 sudo systemctl enable hornet.service
 ```
@@ -113,18 +113,22 @@ sudo rm -fr /var/lib/hornet/snapshots
 Por defecto el nodo viene sin usuario/password y es necesario crear uno para poder administrar el nodo desde el dashboard. Para esto realizamos lo siguiente:
 
 ```sh
-./hornet tools pwd-hash
+
+hornet tools pwd-hash
+
 ```
 
 Al ejecutar nos pide un password y devuelve los valores hash y salt:
 
 ```sh
-No config file found via 'config.json'. Loading default settings.No peering config file found via 'peering.json'. Loading default settings.No profiles config file found via 'profiles.json'. Loading default settings.Enter a password:
+
+Enter a password:
 Re-enter your password:
 
 Success!
 Your hash: 72321e2bc77e2deac3ac2a9318501910996e15c5b063d110dd934f204cf72ac0
 Your salt: 99dcf699a8cfe080e4542bcc9cc74e6eb97f151116a89a424895e131b6fa8ef0
+
 ```
 
 Estos valores hay que ponerlos en el fichero config.json:
