@@ -2,8 +2,12 @@
 
 > Los desarrolladores de Hornet mantienen el repositorio apt de Hornet.
 
-## Antes de comenzar
+> Los scripts que se indican en esta página se pueden descargar desde:
+> [Script de instalación](https://github.com/IOTAC3PO/scriptsnodes/blob/main/install_hornet_ppa.sh)
+> sh install_hornet.sh MIPASSWORD
+> Esto instalará el nodo Hornet y como usuario del Dashboard admin y MIPASSWORD
 
+## Antes de comenzar
 
 Antes de iniciar la Instalación por el método APT tendremos que revisar los requerimientos de software/hardware y tener el sistema operativo actualizado.
 
