@@ -88,36 +88,27 @@ yes | ufw enable
 
 Para generar el password que utilizaremos en el login del dashboard del nodo ejecutaremos la utilidad que proporciona Hornet para tal fin, por lo que primero levantamos el nodo con todas las utilidades out of the box.
 
-Para este ejecutamos:
+Descargamos las imágenes de los contenedores Docker del nodo.
 
-```sh
+Para esto ejecutamos en la terminal:
+
+```sh 
 
 cd /opt/shimmerbeta
-docker-compose up -d
+docker-compose pull
 
 ```
 
-Pasados unos segundos podemos consultar las trazas de los contenedores Docker del nodo Shimmer:
-
-Para esto ejecutamos:
-
-```sh
-
-cd /opt/shimmerbeta
-docker compose logs -f
-
-```
-
-- Viendo las trazas podemos comprobar la actividad del nodo, módulos INX y el monitor Grafana.
-
-Después de comprobar el correcto funcionamiento y antes de crear usuario y password, creamos un fichero de entorno donde guardaremos los siguientes datos:
+Después de descargar las imagenes y antes de crear usuario / password, creamos un fichero de entorno donde guardaremos los siguientes datos:
 - Host
 - Email
 - Dashboard user
 - Password
 - Password Salt
 
-Para crear el fichero:
+Adicionalmente realizamos las consultas de los datos necesarios para informar el fichero de entorno.
+
+Primero, consultamos la url unica que tiene nuestro nodo:
 
 ```sh
 
@@ -131,18 +122,7 @@ Nos devuelve 'static.103.124.46.78.clients.your-server.de'
 
 ```
 
-Descargamos las imágenes de los contenedores Docker del nodo.
-
-Para esto ejecutamos en la terminal:
-
-```sh 
-
-cd /opt/shimmerbeta
-docker-compose pull
-
-```
-
-Generamos el password para nuestro Dashboard del nodo.
+Segundo, generamos el password para nuestro Dashboard del nodo.
 
 Para esto ejecutamos en la terminal:
 
@@ -159,16 +139,16 @@ y nos devuelve
 }
 ```
 
-```sh
-
-echo esto sustituimos los valores del siguiente script:
+Por último con estos datos sustituimos los valores del siguiente script:
 - YOURHOSTNAME por static.103.124.46.78.clients.your-server.de que nos devolvió el comando DIG
 - YOUREMAIL por tu email.- miemail@gmail.com (u otro de vuestra conveniencia)
 - YOURDASHBOARDUSERNAME por admin (u otro de vuestra conveniencia)
 - YOURDASHBOARDPASSWORDHASH por el valor de passwordHash
 - YOURDASHBOARDPASSWORD por el valor de passwordSalt
 
->> SCRIPT
+
+
+```sh
 
 touch .env
 echo "HORNET_HOST=YOURHOSTNAME" >> .env
@@ -176,8 +156,6 @@ echo "ACME_EMAIL=YOUREMAIL" >> .env
 echo "DASHBOARD_USERNAME=YOURDASHBOARDUSERNAME" >> .env
 echo "DASHBOARD_PASSWORD=YOURDASHBOARDPASSWORDHASH" >> .env
 echo "DASHBOARD_SALT=YOURDASHBOARDPASSWORD" >> .env
-
->> END SCRIPT
 
 ```
 
