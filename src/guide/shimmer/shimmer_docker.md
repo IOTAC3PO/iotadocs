@@ -86,7 +86,7 @@ yes | ufw enable
 
 ## Generar usuario y password
 
-Para generar el password que utilizaremos en el login del dashboard del nodo ejecutaremos la utilidad que proporciona Hornet para tal fin, por lo que primero levantamos el nodo con todas las utilidades out of the box.
+Para generar el password que utilizaremos en el login del dashboard del nodo ejecutaremos la utilidad que proporciona Hornet para tal fin, por lo que primero obtenemos las imagenes del nodo con todas las utilidades out of the box.
 
 Descargamos las imágenes de los contenedores Docker del nodo.
 
