@@ -89,15 +89,6 @@ module.exports = {
         },
 
         {
-          title: 'Chronicle',
-          collapsable: true,
-          children: [
-            '/guide/chronicle/chronicle'
-          ]
-        },
-
-
-        {
           title: 'Esp32',
           collapsable: true,
           children: [
@@ -105,13 +96,6 @@ module.exports = {
           ]
         },
 
-        {
-          title: 'Traefik',
-          collapsable: true,
-          children: [
-            '/guide/traefik/traefik'
-          ]
-        },
 
       ],
 
