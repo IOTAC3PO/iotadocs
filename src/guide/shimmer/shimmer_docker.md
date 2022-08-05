@@ -108,7 +108,7 @@ Después de descargar las imagenes y antes de crear usuario / password, creamos 
 
 Adicionalmente realizamos las consultas de los datos necesarios para informar el fichero de entorno.
 
-Primero, consultamos la url unica que tiene nuestro nodo:
+Primero, consultamos la url ùnica que tiene nuestro nodo:
 
 ```sh
 
@@ -146,7 +146,7 @@ Por último con estos datos sustituimos los valores del siguiente script:
 - YOURDASHBOARDPASSWORDHASH por el valor de passwordHash
 - YOURDASHBOARDPASSWORD por el valor de passwordSalt
 
-
+En este momento generamos el fichero de entorno ejecutando en la terminal:
 
 ```sh
 
