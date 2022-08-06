@@ -11,7 +11,7 @@ La opción más recomendable de instalación del nodo Shimmer es con Docker ya q
 
 Antes de continuar tenemos que instalar Docker en nuestro VPS. Hay diferentes formas de realizarlo pero la mas sencilla es utilizar el script sh que proporciona Docker.
 
-Entrando en la consola linux como admin:
+Entrando en la consola linux:
 
 ```sh
 
@@ -106,9 +106,11 @@ Después de descargar las imagenes y antes de crear usuario / password, creamos 
 - Password
 - Password Salt
 
-Adicionalmente realizamos las consultas de los datos necesarios para informar el fichero de entorno.
+Pero antes realizamos las consultas de los datos necesarios para informar el fichero de entorno.
 
-Primero, consultamos la url ùnica que tiene nuestro nodo:
+__Primero__, consultamos la url ùnica que tiene nuestro nodo.
+
+Para esto ejecutamos en la terminal:
 
 ```sh
 
@@ -122,7 +124,7 @@ Nos devuelve 'static.103.124.46.78.clients.your-server.de'
 
 ```
 
-Segundo, generamos el password para nuestro Dashboard del nodo.
+__Segundo__, generamos el password para nuestro Dashboard del nodo.
 
 Para esto ejecutamos en la terminal:
 
@@ -140,11 +142,11 @@ y nos devuelve
 ```
 
 Por último con estos datos sustituimos los valores del siguiente script:
-- YOURHOSTNAME por static.103.124.46.78.clients.your-server.de que nos devolvió el comando DIG
-- YOUREMAIL por tu email.- miemail@gmail.com (u otro de vuestra conveniencia)
-- YOURDASHBOARDUSERNAME por admin (u otro de vuestra conveniencia)
-- YOURDASHBOARDPASSWORDHASH por el valor de passwordHash
-- YOURDASHBOARDPASSWORD por el valor de passwordSalt
+- __YOURHOSTNAME__ por static.103.124.46.78.clients.your-server.de que nos devolvió el comando DIG
+- __YOUREMAIL__ por tu email.- miemail@gmail.com (u otro de vuestra conveniencia)
+- __YOURDASHBOARDUSERNAME__ por admin (u otro de vuestra conveniencia)
+- __YOURDASHBOARDPASSWORDHASH__ por el valor de passwordHash
+- __YOURDASHBOARDPASSWORD__ por el valor de passwordSalt
 
 En este momento generamos el fichero de entorno ejecutando en la terminal:
 
@@ -190,10 +192,9 @@ cd /opt/shimmerbeta
 
 ## Ejecutar el nodo
 
-Para posteriormente levantar el nodo:
+En este momento podemos levantar el nodo, solo tendremos que llamar a docker-compose desde el mismo directorio donde se clono el repositorio Shimmer.
 
-Solo tendremos que llamar a docker-compose desde el mismo directorio donde se clono el repositorio Shimmer.
-Esto nos deja corriendo el contenedor en segundo plano.
+Esto nos deja corriendo el contenedor en segundo plano. El nodo se levantará con el proxy Traefik incluyendo un certificado Certbot para conexiones seguras(https), el nodo Hornet con los módulos INX, Prometheus como recolector de recursos del nodo y Grafana como monitor de recursos que mostrará gráficas del estado del nodo.
 
 ```sh
 
@@ -216,13 +217,27 @@ docker-compose stop
 
 ## Grafana
 
-El nodo de Shimmer viene con un monitor de recursos Grafana, para acceder a el dashboard para acceder a el escribimos en la barra del navegador web la dirección Dig
-que consultamos anteriormente:
+El nodo de Shimmer viene con un __recolector__ de recursos Prometheus y un __monitor__ de recursos Grafana, para acceder a el dashboard para acceder a el escribimos en la barra del navegador web la dirección Dig que consultamos anteriormente:
 
-https://static.103.124.46.78.clients.your-server.de/dashboard
+https://static.XX.XX.XX.XX.clients.your-server.de/__grafana__
 
 Al ser la primera vez que accedemos nos solicita un usuario y password que por defecto es admin/admin .- al introducir el login nos solicita cambiar el password por defecto donde eligiéremos un password a nuestra conveniencia.
 
 Una vez dentro del panel de administración tendremos que añadir un panel para monitorear nuestro nodo Shimmer usando el siguiente Json de configuración:
 
 [Grafana Json node dashing](https://github.com/Dr-Electron/hornet/blob/feat/grafana-dashboard/docker-example/assets/grafana/dashboards/node_dashboard.json)
+
+Seleccionando en el menu izquierdo accedemos a área de DashBoard y seleccionamos import
+![An image](./images/import.png)
+
+Después en Github copiamos el contenido del Json de configuracion del panel de monitorizacion.
+![An image](./images/json.png)
+
+Posteriormente copiamos el Json en el cuadro __import via panel json__
+![An image](./images/apload.png)
+
+Una vez pegado, cargamos pulsando el boton __load__
+![An image](./images/paste.png)
+
+Y al acceder nuevamente al menu DashBoard nos aparecen las métricas de nuestro nodo.
+![An image](./images/dash.png)
