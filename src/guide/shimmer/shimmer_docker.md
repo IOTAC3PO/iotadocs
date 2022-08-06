@@ -217,7 +217,7 @@ docker-compose stop
 
 ## Grafana
 
-El nodo de Shimmer viene con un __recolector__ de recursos Prometheus y un __monitor__ de recursos Grafana, para acceder a el dashboard para acceder a el escribimos en la barra del navegador web la dirección Dig que consultamos anteriormente:
+El nodo de Shimmer viene con un __recolector__ de recursos Prometheus y un __monitor__ de recursos Grafana, para acceder a el dashboard escribimos en la barra del navegador web la dirección Dig que consultamos anteriormente:
 
 https://static.XX.XX.XX.XX.clients.your-server.de/__grafana__
 
