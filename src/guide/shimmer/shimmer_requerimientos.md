@@ -6,7 +6,7 @@
 
 Los nodos Hornet consumen pocos recursos y estos pueden funcionar en arquitecturas ARM o x86.
 
-Para esta guia usamos un VPS x86 de Heztner
+Para esta guía usamos un VPS x86 de Heztner
 
 La configuración mínima es:
 - VPS 2 cores 4 con 4Gb ram

@@ -1,10 +1,10 @@
 # Intro
 
-> Una guia para instalación de nodos de IOTA
+> Una guía para instalación de nodos de IOTA
 
 Gracias por visitar este sitio [untangled wiki]!
 
-Este sitio pretende ser una guia para la instalación de nodos Iota de forma sencilla.
+Este sitio pretende ser una guía para la instalación de nodos Iota de forma sencilla.
 
 Este sitio esta en construcción e ira actualizandose en el tiempo.
 
