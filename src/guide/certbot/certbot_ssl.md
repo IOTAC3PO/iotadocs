@@ -133,4 +133,4 @@ Hasta el momento hemos cesitado de un VPS para instalar un nodo el proxy NGINX y
 
 Existe la posibilidad de no necesitar un VPS y utilizar una raspberry en nuestra casa y tener un dominio gratuito con noip.com y generar el certificado SSL.
 
-Todos los pasos son iguales con la diferencia que no necesitamos hacer un __'dig -x ip'__ ya que tenemos un dominio con noip.com, logicamente ademas hay que abrir los puertos necesarios incluido el 443 SSL de nuestro router.
+Todos los pasos son iguales con la diferencia que no necesitamos hacer un __'dig -x ip'__ ya que tenemos un dominio con noip.com, logicamente además hay que abrir los puertos necesarios incluido el 443 SSL de nuestro router.
