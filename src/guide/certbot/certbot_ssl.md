@@ -129,8 +129,9 @@ Con esto tendremos ls renovación certificado cada 90 días de forma automatica 
 
 ## Instalación de Certbot para noip.com
 
-Hasta el momento hemos cesitado de un VPS para instalar un nodo el proxy NGINX y el certificado SSL.
+Hasta el momento hemos necesitado de un VPS para instalar un nodo el proxy NGINX y el certificado SSL.
 
 Existe la posibilidad de no necesitar un VPS y utilizar una raspberry en nuestra casa y tener un dominio gratuito con noip.com y generar el certificado SSL.
+>Con node.ip hay que tener en cuenta que hay que hacer una renovación mensual del dominio y tiene la instalación de un software cliente o configuración en el router.
 
 Todos los pasos son iguales con la diferencia que no necesitamos hacer un __'dig -x ip'__ ya que tenemos un dominio con noip.com, logicamente además hay que abrir los puertos necesarios incluido el 443 SSL de nuestro router.
