@@ -31,30 +31,6 @@ y nos devuelve 'static.141.209.108.33.clients.your-server.de'
 
 Con este dato (**static.141.209.108.33.clients.your-server.de**) lo guardamos para un uso posterior ya que nos lo pedirá en el momento de generar el certificado SSL.
 
-## Actualizando la información del servidor NGINX
-
-Un paso importante es actualizar la configuración del servidor NGINX con el nombre de nuestro dominio (**static.141.209.108.33.clients.your-server.de**).
-
-En el tutorial de instalación de NGINX pusimos como ejemplo tanto en el nombre de fichero de configuracion como el nombre de servidor logico el nombre de www.nodossl.com .- este nombre hay que sustituirlo por **static.141.209.108.33.clients.your-server.de**.
-
-Para esto ejecutamos en la terminal de linux:
-
-```sh
-
-sudo mv /etc/nginx/sites-enabled/wwww.nodossl.com /etc/nginx/sites-enabled/static.141.209.108.33.clients.your-server.de
-sudo sed -i 's/www.nodossl.com/static.141.209.108.33.clients.your-server.de/g' /etc/nginx/sites-enabled/static.141.209.108.33.clients.your-server.de
-
-```
-
-Compramos que los cambios realiados son correctos y reiniciamos el servicio NGINX:
-
-```sh
-
-sudo nginx -t
-sudo systemctl reload nginx
-
-```
-
 ## Habilitar el puerto Https
 
 Durante la instalación de Certbot se comprueba que el puerto 443 esté abierto para recibir peticiones seguras y para ello abrimos el puerto 443.
@@ -121,7 +97,7 @@ IMPORTANT NOTES:
 
 ```
 
-En este momento podremos acceder a nuestro dashboard del nodo(Hornet) con este formato **https://static.141.209.108.33.clients.your-server.de/dashboard**.
+En este momento podremos acceder a nuestro dashboard del nodo(Hornet) con este formato **https://static.141.209.108.33.clients.your-server.de**.
 
 
 ## Renovación del certificado.
@@ -150,3 +126,11 @@ Output
 ```
 
 Con esto tendremos ls renovación certificado cada 90 días de forma automatica y sin nuestra intervención.
+
+## Instalación de Certbot para noip.com
+
+Hasta el momento hemos cesitado de un VPS para instalar un nodo el proxy NGINX y el certificado SSL.
+
+Existe la posibilidad de no necesitar un VPS y utilizar una raspberry en nuestra casa y tener un dominio gratuito con noip.com y generar el certificado SSL.
+
+Todos los pasos son iguales con la diferencia que no necesitamos hacer un __'dig -x ip'__ ya que tenemos un dominio con noip.com, logicamente ademas hay que abrir los puertos necesarios incluido el 443 SSL de nuestro router.
