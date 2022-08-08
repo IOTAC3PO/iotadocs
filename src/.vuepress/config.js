@@ -70,7 +70,6 @@ module.exports = {
             '/guide/bee/bee'
           ]
         },
-
         {
           title: 'GoShimmer',
           collapsable: true,
@@ -79,7 +78,6 @@ module.exports = {
             '/guide/goshimmer/goshimmer'
           ]
         },
-
         {
           title: 'Wasp',
           collapsable: true,
@@ -87,12 +85,22 @@ module.exports = {
             '/guide/wasp/wasp'
           ]
         },
-
         {
           title: 'Esp32',
           collapsable: true,
           children: [
             '/guide/esp32/esp32'
+          ]
+        },
+        {
+          title: 'Certificado SSL',
+          collapsable: true,
+          children: [
+            '/guide/certbot/certbot_requerimientos',
+            '/guide/certbot/certbot_nginx',
+            '/guide/certbot/certbot_ssl',
+          
+
           ]
         },
 
