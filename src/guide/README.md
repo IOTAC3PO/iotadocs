@@ -4,11 +4,11 @@
 
 Gracias por visitar este sitio [untangled wiki]!
 
-Este sitio pretende ser una guía para la instalación de nodos Iota de forma sencilla.
+Este sitio pretende ser una guía para la instalación de nodos Iota de forma sencilla, breve y concisa, sin entrar en detalles técnicos de fondo de la técnologia Iota y Tangle. Simplemente queremos usar la tecnología de Iota.
 
-Este sitio esta en construcción e ira actualizandose en el tiempo.
+Este sitio está en construcción e irá actualizandose en el tiempo.
 
-Se tratará la instalacón de los nodos:
+Se tratará la instalación de los nodos:
 - __Hornet__
 - __Bee__
 - __GoShimmer__

@@ -102,6 +102,21 @@ module.exports = {
             '/guide/esp32/esp32'
           ]
         },
+        /*{
+          title: 'Seguridad',
+          collapsable: true,
+          children: [
+              {
+                title: 'SSH seguro',
+                collapsable: true,
+                children: [
+                  '/guide/seguridad/ssh/ssh_requerimientos',
+                  '/guide/seguridad/ssh/ssh_openssh',
+                  
+                ]
+              },
+            ]
+        },*/
 
       ],
 
