@@ -79,6 +79,15 @@ module.exports = {
           ]
         },
         {
+          title: 'Certificado SSL',
+          collapsable: true,
+          children: [
+            '/guide/certbot/certbot_requerimientos',
+            '/guide/certbot/certbot_nginx',
+            '/guide/certbot/certbot_ssl',
+          ]
+        },
+        {
           title: 'Wasp',
           collapsable: true,
           children: [
@@ -92,18 +101,6 @@ module.exports = {
             '/guide/esp32/esp32'
           ]
         },
-        {
-          title: 'Certificado SSL',
-          collapsable: true,
-          children: [
-            '/guide/certbot/certbot_requerimientos',
-            '/guide/certbot/certbot_nginx',
-            '/guide/certbot/certbot_ssl',
-          
-
-          ]
-        },
-
 
       ],
 
