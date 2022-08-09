@@ -299,3 +299,47 @@ sudo systemctl restart sshd
 ```
 
 Esta es la configuración básica y nos proporciona mucha seguridad, casi mucha seguridad.
+
+Un ejemplo más de intento de intrusión.
+
+```sh
+
+Aug 09 10:37:40 ubuntu-4gb-hel1-1 sshd[11919]: Failed password for invalid user root from 61.177.173.36 port 62004 ssh2
+Aug 09 10:37:40 ubuntu-4gb-hel1-1 sshd[11919]: Failed password for invalid user root from 61.177.173.36 port 62004 ssh2
+Aug 09 10:37:42 ubuntu-4gb-hel1-1 sshd[11919]: Failed password for invalid user root from 61.177.173.36 port 62004 ssh2
+Aug 09 10:37:43 ubuntu-4gb-hel1-1 sshd[11919]: error: maximum authentication attempts exceeded for invalid user root from 61.177.173.36 port 62004 ssh2 [preauth]
+Aug 09 10:37:43 ubuntu-4gb-hel1-1 sshd[11919]: Disconnecting invalid user root 61.177.173.36 port 62004: Too many authentication failures [preauth]
+
+```
+
+## Cambiando el puerto por defecto de SSH
+
+El puerto por defecto de acceso es el 22. Podemos complicar un poco el acceso a los bots cambiando el número de puerto por otro a nuestra conveniencia.
+
+Para esto ejecutamos en la consola linux:
+
+```sh
+
+sudo ufw allow 3001
+sudo nano /etc/ssh/sshd_config
+
+y buscamos Port 22 .- cambiamos el 22 por otro por ejemplo 3001 y descomentamos quitando # 
+
+Guardamos los cambios y reiniciamos el servicio ssh, borramos el puerto 22 de ufw, recargamos ufw con:
+
+sudo ufw delete allow ssh
+sudo ufw reload
+sudo systemctl restart sshd
+
+```
+
+Ahora para poder entrar desde nuestro cliente usaremos esta forma:
+
+
+```sh
+
+ssh -p 3001 pecadordelapradera@nuestaip
+
+```
+
+En este momento todas las peticiones al puerto 22 serán rechazadas por lo que si alguien quiere entrar tiene que averiguar manualmente con un scaner de puertos cual es nuestro punto de acceso, ya los bots no podrian entrar alegremente.
