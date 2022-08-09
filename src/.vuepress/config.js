@@ -102,7 +102,7 @@ module.exports = {
             '/guide/esp32/esp32'
           ]
         },
-        /*{
+        {
           title: 'Seguridad',
           collapsable: true,
           children: [
@@ -116,7 +116,7 @@ module.exports = {
                 ]
               },
             ]
-        },*/
+        },
 
       ],
 
