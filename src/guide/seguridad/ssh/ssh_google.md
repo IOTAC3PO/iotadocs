@@ -8,7 +8,7 @@ La autenticación multifactor es un método para confirmar su identidad utilizan
 
 El ejemplo más común y más fácil de implementar de autenticación de dos factores utiliza una combinación de frase de contraseña (una contraseña compleja, a menudo formada por varias palabras) y una contraseña de un solo uso generada por una aplicación móvil especial.
 
-Usaremos la aplicación Google Authenticator disponible para Android (en Play Store ) e iOS (en iTunes ) para generar códigos de autenticación.
+Usaremos la aplicación Google Authenticator disponible para Android (Play Store) e iOS (iTunes) para generar códigos de autenticación.
 
 Lo que necesitarás:
 - Una computadora con Ubuntu 16.04 LTS o superior
