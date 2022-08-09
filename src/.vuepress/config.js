@@ -89,20 +89,6 @@ module.exports = {
           ]
         },
         {
-          title: 'Wasp',
-          collapsable: true,
-          children: [
-            '/guide/wasp/wasp'
-          ]
-        },
-        {
-          title: 'Esp32',
-          collapsable: true,
-          children: [
-            '/guide/esp32/esp32'
-          ]
-        },
-        {
           title: 'Seguridad',
           collapsable: true,
           children: [
@@ -118,6 +104,20 @@ module.exports = {
                 ]
               },
             ]
+        },
+        {
+          title: 'Wasp',
+          collapsable: true,
+          children: [
+            '/guide/wasp/wasp'
+          ]
+        },
+        {
+          title: 'Esp32',
+          collapsable: true,
+          children: [
+            '/guide/esp32/esp32'
+          ]
         },
 
       ],
