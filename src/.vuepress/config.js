@@ -112,6 +112,7 @@ module.exports = {
                 children: [
                   '/guide/seguridad/ssh/ssh_requerimientos',
                   '/guide/seguridad/ssh/ssh_openssh',
+                  '/guide/seguridad/ssh/ssh_fail2ban',
                   
                 ]
               },
