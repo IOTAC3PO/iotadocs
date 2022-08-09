@@ -100,7 +100,7 @@ Eso es todo. Ahora, abramos Google Authenticator y agreguemos nuestra clave secr
 
 ## Iniciando la sesión ssh con 2FA
 
-Tras realizar los ccambios probamos que está habilitada la opción de 2FA, el primer password corresponde al usuario de conexión y el segundo es el valor que nos mostrará la app de Google Authenticator.
+Tras realizar los cambios probamos que está habilitada la opción de 2FA, el primer password corresponde al usuario de conexión y el segundo es el valor que nos mostrará la app de Google Authenticator.
 
 ```sh
 
