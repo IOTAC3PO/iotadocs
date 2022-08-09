@@ -2,8 +2,11 @@
 
 > SSH, el shell seguro, se usa a menudo para acceder a sistemas Linux remotos. Debido a que a menudo lo usamos para conectarnos con computadoras que contienen datos importantes, se recomienda agregar otra capa de seguridad. Aquí viene la autenticación de dos factores ( 2FA ).
 
-¿Qué es la autenticación de dos factores?
-La autenticación multifactor es un método para confirmar su identidad utilizando al menos dos formas diferentes de autenticación. El ejemplo más común y más fácil de implementar de autenticación de dos factores utiliza una combinación de frase de contraseña (una contraseña compleja, a menudo formada por varias palabras) y una contraseña de un solo uso generada por una aplicación móvil especial.
+__¿Qué es la autenticación de dos factores?__
+
+La autenticación multifactor es un método para confirmar su identidad utilizando al menos dos formas diferentes de autenticación. 
+
+El ejemplo más común y más fácil de implementar de autenticación de dos factores utiliza una combinación de frase de contraseña (una contraseña compleja, a menudo formada por varias palabras) y una contraseña de un solo uso generada por una aplicación móvil especial.
 
 Usaremos la aplicación Google Authenticator disponible para Android (en Play Store ) e iOS (en iTunes ) para generar códigos de autenticación.
 
@@ -12,8 +15,6 @@ Lo que necesitarás:
 - Un teléfono con Android o iOS
 - Una conexión SSH configurada
 - Debe comprender el peligro de las contraseñas robadas.
-
-
 
 ## Instalación y configuración de los paquetes necesarios
 
@@ -97,7 +98,7 @@ Es posible que haya notado el código QR gigante que apareció durante el proces
 
 Eso es todo. Ahora, abramos Google Authenticator y agreguemos nuestra clave secreta para que funcione.
 
-## Iniciando la sesion ssh
+## Iniciando la sesión ssh con 2FA
 
 Tras realizar los ccambios probamos que está habilitada la opción de 2FA, el primer password corresponde al usuario de conexión y el segundo es el valor que nos mostrará la app de Google Authenticator.
 
